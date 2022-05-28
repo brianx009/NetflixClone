@@ -5,8 +5,10 @@ const app = express();
 const mongoose = require("mongoose");
 //giving configuration for our .env file
 const dotenv = require("dotenv");
-//router
+//router for auth
 const authRoute = require("./routes/auth")
+//router for user
+const usersRoute = require("./routes/users")
 
 dotenv.config(); 
 
@@ -25,6 +27,8 @@ app.use(express.json())
 
 //if we make any request we take the endpoint specified then it calls to our authentication in routes
 app.use("/api/auth", authRoute);
+//if we make any request we take the endpoint specified then it calls to our users in routes
+app.use("/api/users", usersRoute);
 
 //anytime we run npm start we are just console logging to ensure backend is running
 app.listen(8800, ()=>{
