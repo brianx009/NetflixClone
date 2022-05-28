@@ -5,6 +5,8 @@ const app = express();
 const mongoose = require("mongoose");
 //giving configuration for our .env file
 const dotenv = require("dotenv");
+//router
+const authRoute = require("./routes/auth")
 
 dotenv.config(); 
 
@@ -17,6 +19,12 @@ mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(()=>console.log("DB Connection Successful!")).catch((err) => cpnsole.log(err))
+
+//allows our app to use .json files and read them.
+app.use(express.json())
+
+//if we make any request we take the endpoint specified then it calls to our authentication in routes
+app.use("/api/auth", authRoute);
 
 //anytime we run npm start we are just console logging to ensure backend is running
 app.listen(8800, ()=>{
