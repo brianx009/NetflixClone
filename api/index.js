@@ -10,7 +10,9 @@ const authRoute = require("./routes/auth");
 //router for user
 const userRoute = require("./routes/users");
 //router for movie
-const movieRoute = require("./routes/movies")
+const movieRoute = require("./routes/movies");
+//router for list
+const listRoute = require("./routes/lists");
 
 dotenv.config(); 
 
@@ -33,6 +35,8 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 //if we make any request we take the endpoint specified then it calls to our movies in routes
 app.use("/api/movies", movieRoute);
+//if we make any request we take the endpoint specified then it calls to our movies in routes
+app.use("/api/lists", listRoute);
 
 //anytime we run npm start we are just console logging to ensure backend is running
 app.listen(8800, ()=>{
