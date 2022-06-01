@@ -6,9 +6,11 @@ const mongoose = require("mongoose");
 //giving configuration for our .env file
 const dotenv = require("dotenv");
 //router for auth
-const authRoute = require("./routes/auth")
+const authRoute = require("./routes/auth");
 //router for user
-const usersRoute = require("./routes/users")
+const userRoute = require("./routes/users");
+//router for movie
+const movieRoute = require("./routes/movies")
 
 dotenv.config(); 
 
@@ -28,7 +30,9 @@ app.use(express.json())
 //if we make any request we take the endpoint specified then it calls to our authentication in routes
 app.use("/api/auth", authRoute);
 //if we make any request we take the endpoint specified then it calls to our users in routes
-app.use("/api/users", usersRoute);
+app.use("/api/users", userRoute);
+//if we make any request we take the endpoint specified then it calls to our movies in routes
+app.use("/api/movies", movieRoute);
 
 //anytime we run npm start we are just console logging to ensure backend is running
 app.listen(8800, ()=>{
