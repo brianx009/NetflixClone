@@ -1,5 +1,7 @@
 //importing scss to make "navbar" appear white
 import "./navbar.scss"
+import {SearchRoundedIcon, NotificationsRoundedIcon } from '@mui/icons-material';
+
 
 
 
@@ -14,16 +16,21 @@ const Navbar = () => {
         <div className = "container"> 
             <div className = "left">
                 <img src = "images/Logo.png" alt = ""/>
+            
+                <span>Homepage</span>
+                <span>Series</span>
+                <span>Movies</span>
+                <span>New and Popular</span>
+                <span>My List</span>
+              </div>
+            <div className = "right">
+              <SearchRoundedIcon />
+              <span>KID</span>
+              <NotificationsRoundedIcon/>
             </div>
-            <span>Homepage</span>
-            <span>Series</span>
-            <span>Movies</span>
-            <span>New and Popular</span>
-            <span>My List</span>
-            <div className = "right"></div>
         </div>
     </div>
-  )
-}
+  );
+};
 
 export default Navbar

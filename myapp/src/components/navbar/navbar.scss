@@ -1,4 +1,17 @@
 //makes the className = navbar white
 .navbar{
     color: white;
+    //changing navbars font size to 15px
+    font-size: 14px;
+    
+    //accessing our container and making the image smaller
+    .container{
+        //adding padding to the left and right side
+        padding: 0px 50px;
+        display: flex;
+        align-items: center;
+        img{
+            height: 25px;
+        }
+    }
 }
