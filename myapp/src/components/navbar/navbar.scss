@@ -1,68 +1,72 @@
-/*
-//makes the className = navbar white
-.navbar{
+
+.navbar {
+    //makes our navbar scale the entirety of our webpage
+    width: 100%;
+    //makes the text in our navbar white
     color: white;
     //changing navbars font size to 15px
     font-size: 15px;
-    
-    //accessing our container and making the image smaller
-    .container{
-        //adding padding to the left and right side
-        padding: 0px 50px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        img{
-            height: 25px;
-        }
-    }
-};
-*/
-.navbar {
-    width: 100%;
-    color: white;
-    font-size: 14px;
+    //always keeps the navbar visible wherever we scroll
     position: fixed;
+    //sets our navbar set to the top with 0 gap
     top: 0;
+    //sets our navbar to the far left margin with 0 gap
+    left:0;
+    //makes our navbar the top most element, so nothing ever goes over it, just under
     z-index: 999;
+    //adds a gradient filter to our navbar for style and so it could be seen wherever we go 
     background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
-  
+
+    //if our navbar is being scrolled beyond where the yaxis = 0,
+    //we will give a solid black background to our navbar. Else its a transparent background
     &.scrolled{
       background-color: var(--main-color);
     }
-  
+
+
     .container {
+      //adding padding to the left and right side
       padding: 0px 50px;
+      //helps space distribution between our items in navbar
       display: flex;
+      //algins our items in the center of the cross axis
       align-items: center;
+      //adds space between our left and right side of the navbar
       justify-content: space-between;
+      //controls how low/high our navbar is displayed
       height: 70px;
   
       .left {
+          //spaces out and centers the contents of our left div
         display: flex;
         align-items: center;
   
         img {
-          height: 25px;
+          //control of the image size for our logo
+          height: 30px;
+          //controls the space between the first Item in our navbar with our logo
           margin-right: 40px;
         }
   
         span {
+            //adds spaces between the left side contents of the navbar as well as a pointer so when we hover over it looks interactable
           margin-right: 20px;
           cursor: pointer;
         }
       }
-  
+       //spaces out and centers the contents of our right div
       .right {
         display: flex;
         align-items: center;
   
         .icon {
+            //0px space for top and bottom, but 15 px gap for lef and right side of the icons in our right side div/ pointer to make icons looks interactable
           margin: 0px 15px;
           cursor: pointer;
         }
   
         img {
+            // makes our logged in user icon smaller and scaled to look like a active user
           width: 30px;
           height: 30px;
           border-radius: 5px;
@@ -71,6 +75,7 @@
         }
   
         .profile {
+            //not displaying our profile options because its going to require user interaction for it to appear
           .options {
             display: none;
             background-color: var(--main-color);
@@ -83,6 +88,7 @@
           }
   
           &:hover {
+              //on hover over our drop down arrow, we will see the options for logout and settings appear down
             .options {
               display: flex;
               flex-direction: column;
@@ -92,4 +98,5 @@
         }
       }
     }
-  }
+}
+  
