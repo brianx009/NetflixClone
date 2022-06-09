@@ -11,6 +11,7 @@ export default function Home() {
       {/*calls our navbar component to our home page */}
       <Navbar/>
       <Featured/>
+
     </div>
   )
 }
