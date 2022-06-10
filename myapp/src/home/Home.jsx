@@ -10,7 +10,8 @@ export default function Home() {
     <div className="home">
       {/*calls our navbar component to our home page */}
       <Navbar/>
-      {/*calls our Featured component to our home page */}
+      {/*calls our Featured component to our home page if we add "type="movie"" or "type="series" we could
+       see the selector for movie/series genre, else it will be a blank home page*/}
       <Featured/>
 
     </div>

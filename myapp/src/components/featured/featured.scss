@@ -10,21 +10,35 @@
     right:0;
 
     .category {
+      //absolute position allows us to choose where we are moving our container
       position: absolute;
+      //from top we are sending it down 80px
       top: 80px;
+      //from left we are sending it right 50px
       left: 50px;
+      //changing the font size to 30px
       font-size: 30px;
+      //adding a bolding around our text
       font-weight: 500;
+      //text color is white
       color: white;
+      //display flex for optimized spacing 
       display: flex;
+      //controls alignment of all the items on the cross axis
       align-items: center;
   
       select {
+        //pointer cursor when hovering over selector to show interactable
         cursor: pointer;
+        //background color is set to our main color(black)
         background-color: var(--main-color);
+        //border of 1px around the selector
         border: 1px solid white;
+        //text will be white
         color: white;
+        //sends the selector box 20 px to the left
         margin-left: 20px;
+        //adds a 5px padding to the selector
         padding: 5px;
       }
     }
@@ -91,16 +105,21 @@
           cursor: pointer;
   
           &.play {
+            //play button background is white
             background-color: white;
+            //text color will be our main color
             color: var(--main-color);
           }
   
           &.more {
+            //the info button background color is grey
             background-color: gray;
+            //text color will be white
             color: white;
           }
   
           span {
+            //lengthens the size of  our buttons
             margin-left: 5px;
           }
         }

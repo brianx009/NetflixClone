@@ -6,11 +6,16 @@ import "./featured.scss";
 export default function Featured({ type }) {
   return (
     <div className="featured">
+      {/*if there is a type and category*/}
       {type && (
         <div className="category">
+          {/*if our stype is a movie, title is Movies, else Series */}
           <span>{type === "movie" ? "Movies" : "Series"}</span>
+          {/*options for selection */}
           <select name="genre" id="genre">
+            {/*deault selected is going to be Genre */}
             <option>Genre</option>
+            {/*other possible listed options included those below */}
             <option value="adventure">Adventure</option>
             <option value="comedy">Comedy</option>
             <option value="crime">Crime</option>
