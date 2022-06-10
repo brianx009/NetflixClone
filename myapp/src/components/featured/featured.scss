@@ -1,5 +1,9 @@
 .featured {
+  //creates a container of 90 vh that will contain our featured movie
     height: 90vh;
+    //position absolute and margins set to zero in order to allow us to move
+    //this container without having white border areas. Without "absolute", we
+    //would otherwise have a white border around our featured area
     position: absolute;
     top: 0;
     left: 0;
@@ -26,6 +30,8 @@
     }
   
     img {
+      //our movie thumbnail is going to span 100% in both WxH to fill the featured container
+      //and the "object-fit: cover" will allow it to resized to fit the featured container. 
       width: 100%;
       height: 100%; 
       object-fit: cover;
@@ -33,35 +39,55 @@
     }
   
     .info {
+      //title of movie will be stretched by 35%
       width: 35%;
+      //absolute position is used w/ reference to the closest parent that has a position relative value
       position: absolute;
+      //sets the mage left 50px
       left: 50px;
+      //sets the image 100px from the bottom of the featured container
       bottom: 100px;
+      //text color is changed to white
       color: white;
+      //display flex makes for the best possible spacing in width/ height for our contents inside of info
       display: flex;
+      //displays everything in a column format instead of a horizontal listing
       flex-direction: column;
   
       img {
+        //title image is made larger
         width: 400px;
       }
   
       .desc {
+        //movie description has a  margin of 20px from top and bottom, and 0px from left amd right
         margin: 20px 0px;
       }
   
       .buttons {
+        //optimal spacing for our  buttons
         display: flex;
   
         button {
+          //padding for our buttons 10px for top/bottom 20px for left/right
           padding: 10px 20px;
+          //remove the buttons borders
           border: none;
+          // rounds our buttons edges by 5px
           border-radius: 5px;
+          //allows for the text of our buttons to be evenly spaced in the button
           display: flex;
+          //controls alignment of all the items on the cross axis
           align-items: center;
+          //controls alignment of all items in the main axis
           justify-content: center;
+          //text inside buttons is 18px
           font-size: 18px;
+          //boldnedd of font
           font-weight: 500;
+          //space control between the two buttons
           margin-right: 10px;
+          //mouse turns into a pointer when hovering over
           cursor: pointer;
   
           &.play {

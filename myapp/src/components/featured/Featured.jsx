@@ -38,7 +38,8 @@ export default function Featured({ type }) {
           src="images/movieTitle/CC_GFN.png"
           alt=""
         />
-        {/*Movie Description */}
+        
+        {/*Movie Description dummy text  */}
         <span className="desc">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
           adipisci repellendus eum quasi illo, velit numquam, maxime tempora

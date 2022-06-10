@@ -10,6 +10,7 @@ export default function Home() {
     <div className="home">
       {/*calls our navbar component to our home page */}
       <Navbar/>
+      {/*calls our Featured component to our home page */}
       <Featured/>
 
     </div>
