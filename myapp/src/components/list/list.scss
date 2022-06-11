@@ -1,0 +1,70 @@
+.list{
+    //fills in width to 100%
+    width: 100%;
+    //sets top margin of 10px
+    margin-top: 10px;
+
+    .listTitle{
+        //list title text color is turned to white
+        color: white;
+        //font size is 20 px
+        font-size: 20px;
+        //adding weight to the text
+        font-weight: 500;
+        //moving the text to the left 50px
+        margin-left: 50px;
+    }
+
+    .wrapper{
+        //parent should be position relative if we use position absolute
+        position: relative;
+        //this is going to affect both the left and right arrows
+        .sliderArrow{
+            //50px width on the slider arrows with 100% height
+            width:50px;
+            height: 100%;
+            //giving it a black background with .5 opaq
+            background: rgb(22, 22, 22, 0.5);
+            //arrows are white
+            color:white;
+            //absolute because we are going ot be choosing where we want
+            //to move these arrows specifically
+            position: absolute;
+            //changing z index so our arrows are on top of our movie list
+            z-index: 99;
+            //because we are using position absolute, a cute way of centering everything
+            //is as follows...
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            //idicates it is an interactable component
+            cursor: pointer;
+
+            &.left{
+                //left arrow is set to zero
+                left: 0;
+            }
+            &.right{
+                //right arrow is set to zero
+                right: 0;
+            }
+        }
+        .container{
+            //aligns listitems with continue wating text
+            margin-left: 50px;
+            //optimally adjusts the list items to fill in space
+            display: flex;
+            //adds space between the "Continue Watching" and our listItem containers
+            margin-top: 10px;
+            //allows for the entire list item box to show instead of having
+            //overlapping boxes
+            width: max-content;
+            //allows the animation of us scrolling through the list
+            //to come to life. .09 second transition frames so user
+            //doesnt have the option to mess up transition frames
+            //when clickign through quickly
+            transition: all .09s ease;
+        }
+
+    }
+}

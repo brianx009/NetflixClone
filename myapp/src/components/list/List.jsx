@@ -1,0 +1,62 @@
+import "./list.scss";
+import ListItem from "../listItem/ListItem";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import { useRef, useState } from "react";
+
+export default function List() {
+    //declaring these two in order to control our slider appearance if they are in a position to be moved
+    const [isMoved, setisMoved] = useState(0)
+
+    //declaring these two in order to control our slider from sliding out of bounds
+    const [slideNumber, setSlideNumber] = useState(0)
+
+    //allows us to select certain containers where the ref= listRef
+    const listRef = useRef()
+    
+    //how we are to handle when the left/right arrows are clicked
+    const handleClick = (direction) =>{
+        setisMoved(true)
+        //this will give us the exact location/ pizel size of our box, subtracts 50px because of the left margin that was set before.
+        let distance = listRef.current.getBoundingClientRect().x - 50
+        //when the left arrow is clicked and our slide number is greater than 0, direction is changed to left and we execute the code following
+        if(direction === "left" && slideNumber>0){
+            //sets our slide number to our slide number -1
+            setSlideNumber(slideNumber - 1);
+            //+230 to move everything "1 box" to the right and simulate as if were moving left
+            listRef.current.style.transform = `translateX(${distance + 230}px)`
+        }
+        //when the right arrow is clicked and our slide number is less than 3, direction is changed to left and we execute the code following
+        else if(direction === "right" && slideNumber < 3){
+            //sets our slide number to our slide number +1
+            setSlideNumber(slideNumber +1)
+            //-230 to move everything "1 box" to the left and simulate as if were moving right
+            listRef.current.style.transform = `translateX(${distance - 230}px)`
+        }
+    }
+  return (
+    <div className="list">
+        <span className="listTitle">Continue Watching</span>
+        <div className="wrapper">
+            <MdKeyboardArrowLeft className="sliderArrow left"
+             onClick={()=>handleClick("left")}
+              style = {{display: !isMoved && "none"}}
+              />
+            
+            <div className="container" ref={listRef}>
+                <ListItem index={0}/>
+                <ListItem index={1}/>
+                <ListItem index={2}/>
+                <ListItem index={3}/>
+                <ListItem index={4}/>
+                <ListItem index={5}/>
+                <ListItem index={6}/>
+                <ListItem index={7}/>
+                <ListItem index={8}/>
+            </div>
+            <MdKeyboardArrowRight className="sliderArrow right" 
+            onClick={()=>handleClick("right")}
+            />
+        </div>
+    </div>
+  )
+}

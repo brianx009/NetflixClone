@@ -1,4 +1,15 @@
 //creates a black bar where our class name is home in our Home.jsx file
 .home{
+    //makes a fixed position for our home page background
+    position: relative;
+    
+    //fills in the white border we would of had on the left/right/top/bottom margin
+    margin-left: -8px;
+    margin-top: -8px;
+    margin-right: -8px;
+    margin-bottom: -8px;
+    //background color is set to black
     background-color: var(--main-color);
+    //hides our overflow thats occuring on our items list
+    overflow: hidden;
 }

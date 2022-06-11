@@ -1,13 +1,11 @@
 .featured {
   //creates a container of 90 vh that will contain our featured movie
-    height: 90vh;
+    height: 100vh;
     //position absolute and margins set to zero in order to allow us to move
     //this container without having white border areas. Without "absolute", we
     //would otherwise have a white border around our featured area
-    position: absolute;
-    top: 0;
-    left: 0;
-    right:0;
+    position: relative;
+
 
     .category {
       //absolute position allows us to choose where we are moving our container
