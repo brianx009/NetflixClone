@@ -37,17 +37,18 @@ export default function ListItem({ index }) {
               {/*Age limit recstrictions */}
               <span className="limit">G</span>
               {/*year released */}
-              <span>1914</span>
+              <span>Aug. 31 1914</span>
             </div>
             {/*description of the movie */}
             <div className="desc">
-              Charlie Chaplins 25th Film Released Aug. 31 1914 
-              As His New Profession An American comedy silent film made at the 
-              Keystone Studios and starring Charlie Chaplin. The film involves 
-              Chaplin taking care of a man in a wheelchair.
+              Charlie Chaplins 25th Film As His New Profession 
+              An American comedy silent film made at the Keystone 
+              Studios and starring Charlie Chaplin.
             </div>
             {/* Movie Genre */}
-            <div className="genre">Action</div>
+            <div className="genre">
+              Comedy
+            </div>
           </div>
         </>
       )}

@@ -22,9 +22,12 @@
     }
   
     video {
+        //100% width with a 140px hovering height
       width: 100%;
       height: 140px;
+      //fititng the video 
       object-fit: cover;
+      //avsolute position allows us to manipulate where our video is positioned
       position: absolute;
       top: 0;
       left: 0;
@@ -42,6 +45,7 @@
       //shadowbox generated from shadowbox generator online
       -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.07);
       box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.07);
+      //adding a border around our video
       border-radius: 5px;
   
       img {
@@ -50,44 +54,66 @@
       }
   
       .itemInfo {
+          //optimal spacing for item info
         display: flex;
+        //displays info in a column instead of horizontally
         flex-direction: column;
+        //adds padding around info
         padding: 5px;
   
         .icons {
+            //adding optimal spacing for icons
           display: flex;
+          //10 px from the bottm margin
           margin-bottom: 10px;
   
           .icon {
+              //2px of white bordering around icons
             border: 2px solid white;
             padding: 5px;
+            //makes the container a circle instead of square
             border-radius: 50%;
+            //adds spacing between the icons
             margin-right: 10px;
+            //size 16 font
             font-size: 16px;
           }
         }
         .itemInfoTop {
+            //optimal spacing for the items
           display: flex;
+          //centered items
           align-items: center;
+          //adds spacing between the item info and description
           margin-bottom: 10px;
+          //size 14 font
           font-size: 14px;
+          //bolding text
           font-weight: 600;
+          //text is gray color
           color: gray;
   
           .limit {
+              //adds box around the age restriction
             border: 1px solid gray;
+            //padding on the left and right 
             padding: 1px 3px;
+            //margin for top and bottom is set to zero
             margin: 0 10px;
           }
         }
   
         .desc {
+            //size 13 font
           font-size: 13px;
+          //margin from the bottom is 10px
           margin-bottom: 10px;
         }
   
         .genre {
+            //size 14 font
           font-size: 14px;
+          //light gray text
           color: lightgray;
         }
       }
