@@ -1,0 +1,38 @@
+.watch {
+    //spans the entire viewport width
+    //width: 100vpx;
+    //spans the entire viewport height
+    //height: 100vh;
+    //setting an absolute positon that i could manipulate
+    position: absolute;
+    left:-12px;
+    right:-12px;
+    top:-10px;
+    bottom: 3.8px;
+
+    .back {
+        //optimal spacing
+      display: flex;
+      //aligns items to the center
+      align-items: center;
+      //absolute allows us to fix a position 10 px from to pand 10 from left
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      //white text
+      color: white;
+      //pointer cursor when hovered over
+      cursor: pointer;
+      //z index allows Home and our icon to both be ontop of everything 
+      //needed in order for it to be interactable
+      z-index: 2;
+    }
+  
+    .video {
+    //100% Width and Height
+      width: 100%;
+      height: 100%;
+      //fits the full screen
+      object-fit: cover;
+    }
+  }
