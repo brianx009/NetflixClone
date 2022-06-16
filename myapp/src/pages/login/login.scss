@@ -1,0 +1,127 @@
+.login {
+  //making our background full screen
+  width: 100vw;
+  height: 100%;
+  //image of our background is added with a gradient affect
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("https://bloximages.newyork1.vip.townnews.com/gazette.com/content/tncms/assets/v3/editorial/5/0c/50c1c2d0-ec4c-11e8-bae6-2744c8e6f595/5bf33c4dcd5fe.image.jpg");
+  //background is set to cover so it could perfectly scale our picture
+  background-size: cover;
+  //absolute positioning to fix white borders
+  position: absolute;
+  margin-left: -8px;
+  margin-right: 0px;
+  top: 0;
+  margin-bottom: 0;
+
+  .top {
+    .wrapper {
+      //adding padding to our logo
+      padding: 20px 50px;
+      //spacing logo along the top "navbar" line
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo {
+        //making logo larger
+        height: 40px;
+      }
+    }
+  }
+
+  .container {
+    //making form 100x 100 w and h
+    width: 100%;
+    height: 100%;
+    //movable positiong
+    position: absolute;
+    //0 positioning from top
+    top: 0;
+    //0 positiong from left
+    left: 0;
+    //helps position our container in center
+    display: flex;
+    //centers our container in a column form
+    flex-direction: column;
+    //centers container from lef tto right
+    align-items: center;
+    //centers from top to down
+    justify-content: center;
+    //text white inside container
+    color: white;
+
+    form {
+      //forms size with padding
+      width: 300px;
+      height: 300px;
+      padding: 30px;
+      //border around our form
+      border-radius: 5px;
+      //black background for form
+      background-color: var(--main-color);
+      //adding spacing between all items in form
+      display: flex;
+      //setting up forms contents in column
+      flex-direction: column;
+      //adding spacing around each item in form
+      justify-content: space-around;
+
+      input {
+        //making the containers for email and password larger
+        height: 40px;
+        //adding border around containers
+        border-radius: 5px;
+        //background color of continers is gray
+        background-color: gray;
+        //spacing the text inside container 10 px to the right
+        padding-left: 10px;
+
+        &::placeholder {
+          // text color white 
+          color: white;
+        }
+      }
+
+      button {
+        //button is mage larger
+        height: 40px;
+        //rounding button
+        border-radius: 5px;
+        //button color and text
+        background-color: #b22222;
+        color: white;
+        //no button border around
+        border: none;
+        //font size
+        font-size: 18px;
+        //font thickness
+        font-weight: 500;
+        //curspr pointer when over
+        cursor: pointer;
+      }
+
+      .loginButton:hover{
+        background-color:#cb4154 ;
+      }
+
+      .loginButton:active {
+        position:relative;
+        top:1px;
+      }
+
+      span {
+        //color of text 
+        color: lightgray;
+        b {
+          //color of bolded items
+          color: white;
+        }
+      }
+    }
+  }
+}
