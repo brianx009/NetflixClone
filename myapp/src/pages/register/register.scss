@@ -1,92 +1,155 @@
 .register {
+  //making our background full screen
     width: 100vw;
-    height: 100vh;
+    height: 881px;
+    //image of our background is added with a gradient affect
     background: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0) 0%,
         rgba(0, 0, 0, 1) 100%
       ),
-      url("https://cdn.hipwallpaper.com/i/98/21/dUyCkp.jpg");
+      url("https://img.freepik.com/free-vector/online-cinema-poster-background-movie-poster-vector-illustration_165143-1108.jpg?w=2000");
+    //background is set to cover so it could perfectly scale our picture
     background-size: cover;
-    position: relative;
-    left: -8px;
-    top: -8px;
+    //absolute positioning to fix white borders
+    position: absolute;
+    margin-left: -8px;
+    margin-right: 0px;
+
+
 
   
     .top {
       .wrapper {
+        //controls the positioning of our logo and login button. 20 px from top
+        // 50px left and right
         padding: 20px 50px;
+        //aligns items to be right next to eachother even
         display: flex;
+        //aligns the items contents so they fit centered
         align-items: center;
+        //spaces the contents the the far left/right corners
         justify-content: space-between;
   
         .logo {
+          //making logo smaller 
           height: 40px;
         }
   
         .loginButton {
-          background-color: red;
-          border: none;
-          color: white;
-          border-radius: 5px;
-          padding: 5px 15px;
-          font-size: 16px;
-          font-weight: 500;
-          cursor: pointer;
+          //login button
+          box-shadow:inset 0px 1px 0px 0px #cf866c;
+          background-color:#b22222;
+          border-radius:3px;
+          border:1px solid #b22222;
+          display:inline-block;
+          color:#ffffff;
+          font-family:Arial;
+          font-size:13px;
+          padding:6px 24px;
+          text-decoration:none;
+          text-shadow:0px 1px 0px #ff4d00;
+          cursor:pointer;
+          //setting z-index to 2 in order to make it interractable on our website
+          z-index: 2;
+        }
+        .loginButton:hover{
+          //on hover affects on our sign in button
+          background-color:#cb4154 ;
+        }
+
+        .loginButton:active {
+          position:relative;
+          top:1px;
         }
       }
     }
   
     .container {
+      ///container to hold information we are displaying on our page
       width: 100%;
       height: 100%;
       position: absolute;
       top: 0;
       left: 0;
       display: flex;
+      //puts all our information on top of one another
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      //whtie text
       color: white;
   
       h1 {
+        //font sixe is made larger
         font-size: 50px;
       }
   
       h2 {
+        //adds margin between h1 and p tag
         margin: 20px;
       }
   
       p {
+        //p tag font is made larger
         font-size: 20px;
       }
   
       .input {
+        //making width of container 50%
         width: 50%;
+        //white background
         background-color: white;
+        //altering items width and height for the best possible fit
         display: flex;
+        //aligning items center
         align-items: center;
+        //space added between items
         justify-content: space-between;
+        //adding space between the search bar and p
         margin-top: 20px;
+        //making search bar a big larger
         height: 50px;
+        //adding a border around the search box
         border-radius: 5px;
+        //making borber color black
+        border:1px solidblack;
   
         input{
+          //making the search bar 9 units long
             flex: 9;
+            //100% height 
             height: 100%;
+            // no border since we added one in input
             border: none;
             padding: 0 10px;
         }
   
         .registerButton{
-            flex: 3;
-            height: 100%;
-            background-color: red;
-            border: none;
-            color: white;
-            font-size: 22px;
-            cursor: pointer;
+          box-shadow:inset 0px 1px 0px 0px #cf866c;
+          background-color:#b22222;
+          border-radius:3px;
+          border:1px solid #b22222;
+          display:inline-block;
+          cursor:pointer;
+          color:#ffffff;
+          font-family:Arial;
+          font-size:22px;
+          padding:6px 24px;
+          text-decoration:none;
+          text-shadow:0px 1px 0px #ff4d00;
+          height: 100%;
         }
+
+        .registerButton:hover{
+          background-color:#cb4154 ;
+        }
+
+        .registerButton:active {
+          position:relative;
+          top:1px;
+        }
+        
       }
     }
   }
