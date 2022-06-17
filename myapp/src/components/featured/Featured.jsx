@@ -1,6 +1,5 @@
 import { BsFillPlayFill } from "react-icons/bs";
 import { AiOutlineInfoCircle } from "react-icons/ai";
-
 import "./featured.scss";
 
 export default function Featured({ type }) {
@@ -9,8 +8,8 @@ export default function Featured({ type }) {
       {/*if there is a type and category*/}
       {type && (
         <div className="category">
-          {/*if our stype is a movie, title is Movies, else Series */}
-          <span>{type === "movie" ? "Movies" : "Series"}</span>
+          {/*if our type is a movie, title is Movies, else Series */}
+          <span>{type === "movies" ? "Movies" : "Series"}</span>
           {/*options for selection */}
           <select name="genre" id="genre">
             {/*deault selected is going to be Genre */}

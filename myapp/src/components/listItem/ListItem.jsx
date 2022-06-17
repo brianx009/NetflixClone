@@ -2,7 +2,6 @@ import "./listItem.scss";
 import { BsFillPlayFill } from "react-icons/bs";
 import { IoIosAdd } from "react-icons/io";
 import { BiLike, BiDislike } from "react-icons/bi";
-
 import { useState } from "react";
 
 export default function ListItem({ index }) {

@@ -3,6 +3,7 @@ import ListItem from "../listItem/ListItem";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { useRef, useState } from "react";
 
+
 export default function List() {
     //declaring these two in order to control our slider appearance if they are in a position to be moved
     const [isMoved, setisMoved] = useState(0)

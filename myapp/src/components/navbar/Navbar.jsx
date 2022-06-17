@@ -4,6 +4,8 @@ import { IoIosArrowDropdown } from "react-icons/io";
 import { useState } from "react";
 //importing scss to make "navbar" appear white
 import "./navbar.scss";
+import {Link} from "react-router-dom";
+
 
 
 
@@ -32,9 +34,15 @@ const Navbar = () => {
             alt=""
           />
           {/*This is where we are creating text on our website that will be interatable on the navbar*/ }
+          <Link to="/" className="link" >
           <span>Homepage</span>
+          </Link>
+          <Link to="/series" className="link" >
           <span>Series</span>
+          </Link>
+          <Link to="/movies" className="link">
           <span>Movies</span>
+          </Link>
           <span>New and Popular</span>
           <span>My List</span>
         </div>
