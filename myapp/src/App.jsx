@@ -13,10 +13,14 @@ import {
 const App = () => {
   const user = true;
   return (
+    /*setting routes for Home, Register, Login, Movies, Series, and Watch pages in react router dom version 6*/
     <Router>
       <Routes>
+        {/*if user is true, allow access to home, else send them to register */}
         <Route exact path='/' element={user ? <Home/> : <Register/>} />
+        {/*if user is false, send them to register, else send them to home */}
         <Route path='/register' element={!user ? <Register/> : <Home/>} />
+        {/*if user is false, send them to login, else send them to home */}
         <Route path='/login' element={!user ? <Login/> : <Home/>} />
         { user && (
           <>
