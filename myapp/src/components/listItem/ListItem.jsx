@@ -33,7 +33,7 @@ export default function ListItem({ index, item }) {
       onMouseLeave={() => setIsHovered(false)}
     >
       <img
-        src ={movie.img}
+        src ={movie.image}
         alt=""
       />
       {isHovered && (
@@ -52,7 +52,7 @@ export default function ListItem({ index, item }) {
               {/*time limit of movie being called from the database using movie.duration */}
               <span>{movie.duration}</span>
               {/*Age limit recstrictions beig called from DB using item.limit */}
-              <span className="limit">{item.limit}</span>
+              <span className="limit">+{movie.limit}</span>
               {/*year released being called from the DB using movie.year */}
               <span>{movie.year}</span>
             </div>

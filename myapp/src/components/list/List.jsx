@@ -5,10 +5,9 @@ import { useRef, useState } from "react";
 
 
 
-{/*
-passing list as a prop so that way we could change our default titles
-to the titles we set up on our database by calling list.title
- */}
+{/*passing list as a prop so that way we could change our default titles
+to the titles we set up on our database by calling list.title*/}
+
 export default function List({list}) {
     //declaring these two in order to control our slider appearance if they are in a position to be moved
     const [isMoved, setisMoved] = useState(0)
@@ -54,7 +53,7 @@ export default function List({list}) {
                 {list.content.map((item, i)=>(
                     <ListItem index={i} item={item} />
                 ))}
-                <ListItem index={0}/>
+
             </div>
             <MdKeyboardArrowRight className="sliderArrow right" 
             onClick={()=>handleClick("right")}
