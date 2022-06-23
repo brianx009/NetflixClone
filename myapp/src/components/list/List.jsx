@@ -4,7 +4,7 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { useRef, useState } from "react";
 
 
-export default function List() {
+export default function List({list}) {
     //declaring these two in order to control our slider appearance if they are in a position to be moved
     const [isMoved, setisMoved] = useState(0)
 
@@ -36,7 +36,7 @@ export default function List() {
     }
   return (
     <div className="list">
-        <span className="listTitle">Continue Watching</span>
+        <span className="listTitle">{list.title} </span>
         <div className="wrapper">
             <MdKeyboardArrowLeft className="sliderArrow left"
              onClick={()=>handleClick("left")}
@@ -44,15 +44,10 @@ export default function List() {
               />
             
             <div className="container" ref={listRef}>
-                <ListItem index={0}/>
-                <ListItem index={1}/>
-                <ListItem index={2}/>
-                <ListItem index={3}/>
-                <ListItem index={4}/>
-                <ListItem index={5}/>
-                <ListItem index={6}/>
-                <ListItem index={7}/>
-                <ListItem index={8}/>
+                {list.content.map((item, i)=>(
+                    <ListItem index = {i} item={item}/>
+                ))}
+
             </div>
             <MdKeyboardArrowRight className="sliderArrow right" 
             onClick={()=>handleClick("right")}
