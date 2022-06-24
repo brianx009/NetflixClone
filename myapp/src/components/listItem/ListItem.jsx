@@ -4,6 +4,7 @@ import { IoIosAdd } from "react-icons/io";
 import { BiLike, BiDislike } from "react-icons/bi";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function ListItem({ index, item }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -25,7 +26,8 @@ export default function ListItem({ index, item }) {
     getMovie()
   }, [item]);
 
-  return (
+    return (
+    <Link to={`/watch/${movie._id}`}>
     <div
       className="listItem"
       style={{ left: isHovered && index * 225 - 50 + index * 2.5 }}
@@ -67,5 +69,6 @@ export default function ListItem({ index, item }) {
         </>
       )}
     </div>
+    </Link>
   );
 }
