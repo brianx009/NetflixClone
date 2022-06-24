@@ -36,7 +36,7 @@ export default function List({list}) {
     }
   return (
     <div className="list">
-        <span className="listTitle">{list.title} </span>
+        <span className="listTitle">{list.title}. . . </span>
         <div className="wrapper">
             <MdKeyboardArrowLeft className="sliderArrow left"
              onClick={()=>handleClick("left")}

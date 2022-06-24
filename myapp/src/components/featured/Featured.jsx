@@ -39,7 +39,7 @@ export default function Featured({ type }) {
       {/*Movie Title png */}
       <div className="info">
         <img
-          src="images/movieTitle/CC_GFN.png"
+          src="https://see.fontimg.com/api/renderfont4/K7vrX/eyJyIjoiZnMiLCJoIjoxMzYsInciOjIwMDAsImZzIjo2OCwiZmdjIjoiIzk1MTgxOCIsImJnYyI6IiNGRkZGRkYiLCJ0IjoxfQ/VGhlIEdvb2QgZm9yIG5vdGhpbmc/kung-fu-master.png"
           alt=""
         />
         

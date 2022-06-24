@@ -30,7 +30,7 @@ const Navbar = () => {
         <div className="left">
           {/*image is the container for our website logo */}
           <img
-            src="images/Logo.png"
+            src="images/image0.png"
             alt=""
           />
           {/*This is where we are creating text on our website that will be interatable on the navbar*/ }
